@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root{ /*Declaracion de variables*/
+    --color-primario:#000000;
+    --color-secundario:#F6F6F6;
+    --color-terciario:#22D4FD;
+    --color-hover: #272727;
+
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", "sans-serif";
+}
+
 * {
     /*Reiniciamos el css*/
     padding: 0;
@@ -9,18 +19,32 @@
 body{
     /*Indicamos las caracteristicas de nuestro body como el color de fondo y color de las letras.*/
     box-sizing: border-box;
-    background-color: #000000;
-    color: #F6F6F6;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
 }
 
-.tituloPrincipal-destacar { /*Clases personalizadas*/
-    color: #22D4FD
+.header{
+    padding: 2% 0% 0% 15%;
+}
+
+.header__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.header__menu__link{
+    /*Instrucciones par el diseño de los enlaces:*/
+    font-family: var(--fuente-montserrat);
+    font-size: 24px;
+    font-weight: 600; /*Relleno de fondo*/
+    color: var(--color-terciario);
+    text-decoration: none;
 }
 
 .presentacion {
+    padding: 10.2% 15%; /*Ajuste de espacio vertical y horizontal*/
     display: flex;
     align-items: center;
-    margin: 10% 15%;
     justify-content: space-between;
 }
 
@@ -33,12 +57,16 @@ body{
 
 .presentacion__contenido__titulo{
     font-size: 36px;
-    font-family: "Krona One", "sans-serif";
+    font-family: var(--fuente-krona);
+}
+
+.tituloPrincipal-destacar { /*Clases personalizadas*/
+    color: var(--color-terciario);
 }
 
 .presentacion__contenido__parrafo{
     font-size: 24px;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--fuente-montserrat);
 }
 
 .presentacion__enlaces{
@@ -51,7 +79,7 @@ body{
 
 .presentacion__enlaces__subtitulo{
     font-size: 24px;
-    font-family: "Krona One", "sans-serif";
+    font-family: var(--fuente-krona);
     font-weight: 400;
 }
 
@@ -63,24 +91,24 @@ body{
     font-weight: 600;
     padding: 21.5px 0;
     text-decoration: none;
-    font-family: "Montserrat", sans-serif;
-    color: #F6F6F6;
-    border: 2px solid #22D4FD;
+    font-family: var(--fuente-montserrat);
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario); /*Crea un contorno simulando un boton.*/
     display: flex;
     justify-content: center;
     gap: 10px; /*Indica el espacio entre los iconos*/
 }
 
 .presentacion__enlaces__link:hover{ /*El hover se utiliza para seleccionar elementos cuando pasas el ratón sobre ellos*/
-    background-color: #272727;
+    background-color: var(--color-hover);
 }
 
 .footer{
-    background-color: #22D4FD;
+    background-color: var(--color-terciario);
     padding: 24px;
-    color: #000000;
+    color: var(--color-primario);
     text-align: center;
     font-size: 24px;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--fuente-montserrat);
     font-weight: 400;
 }
