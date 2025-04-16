@@ -35,28 +35,29 @@ body{
 .header__menu__link{
     /*Instrucciones par el diseño de los enlaces:*/
     font-family: var(--fuente-montserrat);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600; /*Relleno de fondo*/
     color: var(--color-terciario);
     text-decoration: none;
 }
 
 .presentacion {
-    padding: 10.2% 15%; /*Ajuste de espacio vertical y horizontal*/
+    padding: 7% 15%; /*Ajuste de espacio vertical y horizontal*/
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 82px;
 }
 
 .presentacion__contenido{
-    width: 615px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
 .presentacion__contenido__titulo{
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family: var(--fuente-krona);
 }
 
@@ -65,7 +66,7 @@ body{
 }
 
 .presentacion__contenido__parrafo{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fuente-montserrat);
 }
 
@@ -78,16 +79,16 @@ body{
 }
 
 .presentacion__enlaces__subtitulo{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fuente-krona);
     font-weight: 400;
 }
 
 .presentacion__enlaces__link{
-    width: 378px;
+    width: 50%;
     text-align: center;
     border-radius: 8px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     padding: 21.5px 0;
     text-decoration: none;
@@ -103,12 +104,37 @@ body{
     background-color: var(--color-hover);
 }
 
+.presentacion__imagen{
+    width: 50%;
+}
+
 .footer{
     background-color: var(--color-terciario);
     padding: 24px;
     color: var(--color-primario);
     text-align: center;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fuente-montserrat);
     font-weight: 400;
 }
+
+@media (max-width: 1200px) {
+
+    .header{
+        padding: 10%;
+    }
+
+    .header__menu{
+        justify-content: center;
+    }
+
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 3%;
+    }
+
+    .presentacion__contenido{
+        width: auto;
+    }
+  }
+  
